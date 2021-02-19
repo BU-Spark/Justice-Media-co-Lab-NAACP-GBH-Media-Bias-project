@@ -5,6 +5,8 @@ const helmet = require("helmet");
 const cors = require("cors");
 const compression = require("compression");
 
+const routes = require("./routes/v1/index.js");
+
 const envVariables = require("./config/environments");
 const logger = require("./config/logger");
 
@@ -23,8 +25,7 @@ app.use(helmet());
 // setup basic CORS policy
 app.use(cors());
 
-app.get("/", (req, res) => {
-  res.json({ hello: "NCAAP-dahboard" });
-});
+// mount api v1 routes
+app.use("/api", routes);
 
 module.exports = server;
