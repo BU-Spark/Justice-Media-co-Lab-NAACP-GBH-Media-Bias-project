@@ -5,6 +5,7 @@ import colors from 'colors'
 import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 import connectDB from './config/db.js'
 
+import inputRoutes from './routes/inputRoutes.js'
 import reportRoutes from './routes/reportRoutes.js'
 import userRoutes from './routes/userRoutes.js'
 
@@ -20,6 +21,7 @@ app.get('/', (req, res) => {
     res.send('API is running...')
 })
 
+app.use('/api/inputs', inputRoutes)
 app.use('/api/reports', reportRoutes)
 app.use('/api/users', userRoutes)
 

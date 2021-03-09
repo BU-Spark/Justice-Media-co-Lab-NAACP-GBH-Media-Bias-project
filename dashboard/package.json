@@ -21,7 +21,9 @@
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.11.19"
+    "mongoose": "^5.11.19",
+    "prop-types": "^15.7.2",
+    "react-datepicker": "^3.6.0"
   },
   "devDependencies": {
     "concurrently": "^6.0.0",
