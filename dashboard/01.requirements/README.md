@@ -5,14 +5,15 @@ Web Application to analyze articles using one of the following three methods:
 - topic modeling
 - entity recognition
 
-
-Technologies:
-
+Technologies:  
+Front-end:  
 - React
 - Leaflet
-- OpenMap
-
+- OpenMap  
+Back-end:  
 - Express
-- NodeJS
+- NodeJS  
+DB:  
+- MongoDB  
 
-- MongoDB
+Links:  
