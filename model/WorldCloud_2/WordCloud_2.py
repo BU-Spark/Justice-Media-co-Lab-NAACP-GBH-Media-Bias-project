@@ -29,18 +29,26 @@ for i, row in words.iterrows():
 # print(G.nodes())
 
 # drawing nodes and edges separately so we can capture collection for colobar
-pos = nx.spring_layout(G,k=0.5)
+pos = nx.kamada_kawai_layout(G)
 betCent = nx.betweenness_centrality(G, normalized=True, endpoints=True)
 node_color = [18000.0 * G.degree(v) for v in G]
-node_size = [v * 10000 for v in betCent.values()]
+node_size = [v * 8000 for v in betCent.values()]
 
 
 # G = nx.node_connected_component(G,'black')
-plt.figure(figsize=(15,15))
-ec = nx.draw_networkx_edges(G, pos, alpha=0.8, edge_color = 'black')
-nc = nx.draw_networkx_nodes(G, pos, node_size = node_size, node_color = node_color)
+plt.figure(figsize=(10,10))
+ec = nx.draw_networkx_edges(
+    G, pos, 
+    alpha=0.8, 
+    edge_color = 'black',
+    connectionstyle=f"arc3,rad={0.2}")
+
+nc = nx.draw_networkx_nodes(
+    G, pos, 
+    node_size = node_size, 
+    node_color = node_color)
 nx.draw_networkx_labels(G,pos, font_size = 10)
 
-plt.colorbar(nc)
+# plt.colorbar(nc)
 plt.axis('off')
 plt.show()
