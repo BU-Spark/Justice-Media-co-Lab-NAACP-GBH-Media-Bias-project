@@ -1,7 +1,7 @@
 {
   "name": "proshop",
   "version": "1.0.0",
-  "description": "MERN shopping cart app",
+  "description": "NCAAP media BIAS dashboard",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -22,8 +22,7 @@
     "express-async-handler": "^1.1.4",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.19",
-    "prop-types": "^15.7.2",
-    "react-datepicker": "^3.6.0"
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "concurrently": "^6.0.0",
