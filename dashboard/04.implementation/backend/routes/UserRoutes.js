@@ -7,9 +7,10 @@ import {
     updateUserProfile,
 } from '../controllers/userController.js'
 import { protect } from '../middleware/authMiddleware.js'
+import { loginValidator, registerValidator } from '../validators/userValidator.js'
 
-router.route('/').post(registerUser)
-router.post('/login', authUser)
+router.route('/').post(registerValidator, registerUser)
+router.post('/login', loginValidator, authUser)
 router
     .route('/profile')
     .get(protect, getUserProfile)
