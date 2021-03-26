@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 
 
-df = pd.read_csv('bostonglobe2014.csv')
+df = pd.read_csv('./data-source/bostonglobe2014.csv')
 #print(df.head())
 #print(df.iloc[5,0])
 
